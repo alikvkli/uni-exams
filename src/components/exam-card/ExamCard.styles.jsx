@@ -18,23 +18,25 @@ export const StyledChip = styled(Chip)(({ theme }) => ({
   },
 }));
 
-
-
-
 export const ExamButton = styled(Button)(({ theme }) => ({
   position: "absolute",
+  backgroundColor: "#fff",
   bottom: "0",
   left: "0",
-  right:"0",
-  zIndex:"1",
+  right: "0",
+  zIndex: "1",
   height: "50px",
+  color: "#333333",
   [theme.breakpoints.up("sm")]: {
     display: "none",
   },
   [theme.breakpoints.down("sm")]: {
     top: "unset",
-    bottom:"0",
-    zIndex:"1"
+    bottom: "0",
+    zIndex: "1",
+  },
+  "&:hover": {
+    backgroundColor: "#f5f5f5",
   },
 }));
 
@@ -44,6 +46,11 @@ export const Exams = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   position: "relative",
+  [theme.breakpoints.up("sm")]: {
+    "&:last-child": {
+      marginBottom: "60px",
+    },
+  },
 }));
 
 export const ExamItem = styled("div")(({ theme }) => ({
@@ -67,11 +74,10 @@ export const ExamItem = styled("div")(({ theme }) => ({
     display: "inline-flex",
   },
   "&:hover > div": {
-    marginBottom:"30px",
-    transition: "margin 0.3s"
-  }
+    marginBottom: "30px",
+    transition: "margin 0.3s",
+  },
 }));
-
 
 export const ExamItemContent = styled("div")(({ theme }) => ({
   display: "flex",
@@ -84,38 +90,48 @@ export const ExamItemContent = styled("div")(({ theme }) => ({
   boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
   width: "100%",
   height: "100px",
-  flexFlow:"wrap",
-  gap:"10px",
+  flexFlow: "wrap",
+  gap: "10px",
   [theme.breakpoints.down("sm")]: {
-    position:"absolute",
+    position: "absolute",
     flexDirection: "column",
-    flexFlow:"column",
-    height:"150px",
-    marginBottom:"30px"
+    flexFlow: "column",
+    height: "150px",
+    marginBottom: "30px",
   },
 }));
 
+export const ExamFileInfo = styled("div")(({ theme }) => ({
+  display: "flex",
+  position: "absolute",
+  backgroundColor: "rgba(0,0,0,0.16)",
+  padding: "16px",
+  top: "0",
+  left: "0",
+  width: "100%",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+  justifyContent: "space-between",
+}));
 
-export const ExamFileInfo = styled("div")(({theme}) => ({
-    display:"flex",
-    position:"absolute",
-    backgroundColor: "rgba(0,0,0,0.16)",
-    padding: "16px",
-    top:"0",
-    left:"0",
-    width:"100%",
-    boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
-    justifyContent:"flex-end",
-    "span": {
-        display: "flex",
-        alignItems:"center",
-        color:"#fff",
-        "&:not(:last-child)": {
-            marginRight: "10px"
-        },
-        ".MuiSvgIcon-root:last-child": {
-            marginRight:"10px"
-        }
-        
-    }
-}))
+export const Span = styled("span")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  color: "#fff",
+  textOverflow: "ellipsis",
+  "&:not(:last-child)": {
+    marginRight: "10px",
+  },
+  ".MuiSvgIcon-root:last-child": {
+    marginRight: "10px",
+  },
+}));
+
+export const RightSide = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+}));
+
+export const LeftSide = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+}));

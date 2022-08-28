@@ -1,28 +1,9 @@
-import { styled, alpha } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import Button from "@mui/material/Button";
 
 
 
-
-export const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginRight: "auto",
-  marginLeft: "auto",
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(3),
-    width: "auto",
-  },
-  [theme.breakpoints.down("sm")]:{
-    display:"none",
-  }
-}));
 
 export const DesktopButton = styled(Button)(({theme}) => ({
     [theme.breakpoints.down("md")]:{
